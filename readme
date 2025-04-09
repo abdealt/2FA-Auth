@@ -1,6 +1,6 @@
 # Auth3 - Module d'Authentification
 
-Ce projet est un module d'authentification basé sur **Go**, **Fiber** et **Grom**, avec des fonctionnalités telles que l'authentification des utilisateurs, l'envoi de codes OTP (One-Time Password) par email, et la réinitialisation de mot de passe.
+Ce projet est un module d'authentification basé sur **Go**, **Fiber** et **Grom**, avec des fonctionnalités telles que l'authentification des utilisateurs, l'envoi de codes OTP (One-Time Password) par email, la réinitialisation de mot de passe et la création de compte.
 
 ## Prérequis
 
