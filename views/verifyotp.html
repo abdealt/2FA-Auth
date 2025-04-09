@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification OTP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    <div class="min-h-screen flex items-center justify-center p-6">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">Vérifiez votre compte</h1>
+            <p class="text-lg text-gray-700 text-center mb-6">Un code OTP a été envoyé à votre adresse : <span class="font-semibold text-blue-600">{{.Email}}</span></p>
+            <form action="/verifyotp" method="post" class="space-y-4">
+                <div>
+                    <label for="otp" class="block text-sm font-medium text-gray-700">Code OTP :</label>
+                    <input type="text" id="otp" name="otp" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <button type="submit" class="w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Vérifier
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
