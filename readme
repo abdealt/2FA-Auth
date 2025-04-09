@@ -1,0 +1,38 @@
+# Auth3 - Module d'Authentification
+
+Ce projet est un module d'authentification basé sur **Go**, **Fiber** et **Grom**, avec des fonctionnalités telles que l'authentification des utilisateurs, l'envoi de codes OTP (One-Time Password) par email, et la réinitialisation de mot de passe.
+
+## Prérequis
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
+
+- [Go](https://go.dev/dl/) (version 1.18 ou supérieure)
+- Une base de données PostgreSQL
+- Un compte [Google](https://www.google.com/) pour l'envoi d'emails, dans lequel il faudra crée un mot de passe d'application.
+
+## Installation
+
+1. Clonez ce dépôt sur votre machine locale :
+
+   ```bash
+   git clone https://github.com/abdealt/2FA-Auth
+   cd 2FA-Auth
+
+2. Installez les dépendances requises :
+
+go mod tidy
+
+3. Configurez votre base de données PostgreSQL en créant un fichier `.env` avec les informations suivantes
+DB_HOST=<adresse_hôte_de_la_base_de_données>
+DB_PORT=<port_de_la_base_de_données>
+DB_USER=<utilisateur_de_la_base_de_données>
+DB_PASSWORD=<mot_de_passe_de_la_base_de_données>
+DB_NAME=<nom_de_la_base_de_données>
+GMAIL_USERNAME=<votre_adresse_mail>
+GMAIL_PASSWORD=<votre_mot_de_passe_d'application>
+
+4. Exécutez la commande suivante pour créer la base de données dont vous avez besoin :
+sql -U <postgres_username>;
+CREATE DATABASE <nom_de_la_base>;
+
+5. Mettez a jour votre fichier `.env` avec les informations de connexion à votre base de données PostgreSQL.
